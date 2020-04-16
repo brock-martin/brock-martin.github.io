@@ -31,19 +31,12 @@ body {
   font-weight: normal;
   color: #111;
 }
-
 a {
 	color: #0066cb;
 	text-decoration: none;
 }
 a:hover {
 	color: #3d9cfa;
-}
-img {
-	max-width: 100%;
-  height: auto;
-  border: 0;
-	vertical-align: top;
 }
 h1, h2 {
 	margin: 0;
@@ -67,36 +60,64 @@ p {
   line-height: 28px;
 }
 
+.content {
+  position: relative;
+  margin: 0 auto;
+  padding: 30px 20px 30px 200px;
+  max-width: 820px;
+}
 header {
   padding-top: 20px;
   background: #ececec;
   font-size: 18px;
+  color: #0066cb;
 }
-.content {
-  margin: 0 auto;
-  padding: 30px 20px;
-  max-width: 640px;
+header img {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  width: 154px;
+  height: 154px;
+  border: 2px solid #fff;
+  border-radius: 50%;
 }
-.links {
-  margin-top: 5px;
-}
-.links a {
+header .links {
   display: inline-block;
-  vertical-align:
+  margin-top: 10px;
+  background: #0066cb;
+  padding: 5px 20px;
+  border-radius: 5px;
+  color: #fff;
 }
-.links a.facebook {
+header .links a {
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+  transition: opacity 0.25s;
+}
+header .links a.facebook {
   padding: 0 15px;
 }
-.links a .icon {
+header .links a .icon {
   font-size: 24px;
 }
-
+header .links a:hover {
+  opacity: 0.7;
+}
 @media only screen and (max-width: 680px) {
+  .content {
+    padding: 30px 20px;
+  }
   header {
     padding-top: 0;
+    text-align: center
   }
-}
-@media only screen and (max-width: 480px) {
+  header img {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-bottom: 5px;
+  }
   h1 {
   	font-size: 34px;
   }
@@ -119,9 +140,10 @@ header {
 <body>
 <header>
   <div class="content">
+    <img src="img/brock.jpg" alt="Brock Martin">
     <h1>Brock Martin</h1>
     <h2>Web developer with over 16 years of experience creating beautiful, interactive websites for hundreds of clients.</h2>
-    Interested in working together?
+    Interested in working together?<br>
     <div class="links">
       <a href="https://www.linkedin.com/in/brockmartin333/" target="_blank" title="LinkedIn"><i class="icon ion-social-linkedin"></i></a>
       <a href="https://www.facebook.com/brock.martin.37625/" target="_blank" title="Facebook" class="facebook"><i class="icon ion-social-facebook"></i></a>
