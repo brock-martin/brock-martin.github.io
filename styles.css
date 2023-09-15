@@ -159,7 +159,7 @@ main a:hover {
     }
 }
 
-/*@media (prefers-color-scheme: dark) {*/
+@media (prefers-color-scheme: dark) {
     body {
         background: #2e3239;
         color: #ccc;
@@ -192,4 +192,4 @@ main a:hover {
     main a:hover {
         border-color: #fff;
     }
-/*}*/
+}
