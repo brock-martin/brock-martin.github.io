@@ -48,7 +48,6 @@ h1, h2, h3 {
     line-height: normal;
 }
 h2 {
-    margin-bottom: 5px;
     font-size: 22px;
 }
 h3 {
@@ -114,6 +113,9 @@ main a {
 main a:hover {
     border-color: #000;
 }
+main h2 {
+    margin: 40px auto 5px auto;
+}
 
 .project {
     position: relative;
@@ -144,6 +146,7 @@ main a:hover {
         text-align: center
     }
     header h2 {
+        font-size: 18px;
         line-height: 30px;
     }
     header img {
@@ -154,9 +157,6 @@ main a:hover {
     }
     h1 {
         font-size: 34px;
-    }
-    h2, h3 {
-        font-size: 18px;
     }
 }
 
