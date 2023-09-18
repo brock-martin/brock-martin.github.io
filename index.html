@@ -14,7 +14,10 @@
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.min.css">
+<link rel="preload" as="image" href="img/brock.jpg">
+<link rel="preload" href="fonts/inter-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-v12-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163810904-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -26,7 +29,7 @@
 <body>
 <header>
     <section>
-        <img src="img/brock.jpg" alt="Brock Martin">
+        <img src="img/brock.jpg" alt="Brock Martin" width="150" height="150" decoding="async">
         <h1>Brock Martin</h1>
         <h2>Web developer with over 17 years of experience creating beautiful, interactive websites for hundreds of clients.</h2>
         
