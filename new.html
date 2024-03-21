@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<!--
+Viewing the page source? Nice!
+Need help with a project?
+Contact me at brock@brockmartin.net
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brock Martin - Web Developer</title>
+<link rel="canonical" href="https://brockmartin.net/">
+<meta name="description" content="Web developer with over 17 years of experience creating beautiful, interactive websites for hundreds of clients.">
+<meta property="og:title" content="Brock Martin - Web Developer">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Brock Martin">
+<meta property="og:description" content="Web developer with over 17 years of experience creating beautiful, interactive websites for hundreds of clients.">
+<meta property="og:url" content="https://brockmartin.net/">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="preload" href="img/brock.jpg" as="image">
+<link rel="preload" href="fonts/inter-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-v12-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+
+<!--
+    <style>@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:400;src:url(fonts/inter-v12-latin-regular.woff2) format('woff2')}@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:700;src:url(fonts/inter-v12-latin-700.woff2) format('woff2')}html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}body{margin:0;background:#fff;text-align:left;font-family:Inter,sans-serif;font-size:16px;font-weight:400;color:#111}a{color:#333;text-decoration:none}a:hover{color:#000}h1,h2,h3{margin:0;padding:0;font-family:Inter,sans-serif;font-size:40px;font-weight:700;font-style:normal;color:#333;line-height:normal}h2{font-size:22px}h3{font-size:18px;line-height:28px}p{margin:0 auto 25px auto;line-height:28px}section{position:relative;margin:0 auto;padding:40px 20px 40px 200px;max-width:820px}header{padding-top:20px;background:#ececec;font-size:18px;color:#0066cb}header img{position:absolute;top:40px;left:20px;width:154px;height:154px;background-color:#fff;border:2px solid #fff;border-radius:50%}header h2{margin-top:5px;margin-bottom:20px;padding-top:5px;border-top:1px solid #d6d6d6;font-weight:400;line-height:34px}header .email{display:inline-block;margin-top:20px;padding:10px 20px 10px 60px;background-color:#0066cb;background-image:url(img/icon-email.svg);background-repeat:no-repeat;background-position:20px center;background-size:30px auto;border-radius:5px;font-size:16px;color:#fff;transition:opacity .25s}header .email:hover{opacity:.7}main a{border-bottom:1px solid #ccc;transition:all .25s}main a:hover{border-color:#000}main h2{margin:40px auto 5px auto}.project{position:relative;margin:50px auto;padding-left:70px}.project img{position:absolute;top:2px;left:0;width:50px;height:50px;border-radius:5px}.project h3 span{white-space:nowrap;font-size:14px;font-weight:400;opacity:.5}@media only screen and (max-width:680px){section{padding:40px 20px}header{padding-top:0;text-align:center}header h2{font-size:18px;line-height:30px}header img{position:relative;top:auto;left:auto;margin-bottom:5px}h1{font-size:34px}}@media (prefers-color-scheme:dark){body{background:#2e3239;color:#ccc}a{color:#ccc}a:hover{color:#fff}h1,h2,h3{color:#ddd}header{background:#242832;color:#3d9cfa}header img{border:2px solid #eee;opacity:.8}header h2{border-top:1px solid #666;color:#bbb}main a{border-bottom:1px solid #555}main a:hover{border-color:#fff}}</style>
+-->
+
+<style>
+/* inter-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/inter-v12-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/inter-v12-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    background: #fff;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #111;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+a:hover {
+    color: #000;
+}
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: normal;
+    color: #333;
+    line-height: normal;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+    line-height: 28px;
+}
+p {
+    margin: 0 auto 25px auto;
+    line-height: 28px;
+}
+section {
+    position: relative;
+    margin: 0 auto;
+    padding: 40px 20px 40px 200px;
+    max-width: 920px;
+}
+header {
+    padding-top: 20px;
+    background: #ececec;
+    font-size: 18px;
+    color: #0066cb;
+}
+header img {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    width: 154px;
+    height: 154px;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+header h2 {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    border-top: 1px solid #d6d6d6;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 36px;
+}
+header .email {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px 10px 60px;
+    background-color: #0066cb;
+    background-image: url('img/icon-email.svg');
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-size: 30px auto;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    transition: opacity 0.25s;
+}
+header .email:hover {
+    opacity: 0.7;
+}
+
+main a {
+    border-bottom: 1px solid #ccc;
+    transition: all 0.25s;
+}
+main a:hover {
+    border-color: #000;
+}
+main h2 {
+    margin: 40px auto 5px auto;
+    font-size: 50px;
+    color: #aaa;
+}
+
+.project {
+    position: relative;
+    margin: 50px auto;
+    padding-left: 70px;
+}
+.project img {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+.project h3 span {
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: normal;
+    opacity: 0.5;
+}
+
+.quotes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjusts the spacing between the quote blocks */
+    gap: 20px; /* Space between the quotes */
+    margin: 30px auto;
+}
+.quote {
+    flex-basis: calc(50% - 10px); /* Adjust width for 2-across layout, subtract half of gap to maintain spacing */
+    padding: 20px; /* Space inside each quote box */
+    background-color: #ffffff; /* Optional: changes the background color */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for depth */
+    border-radius: 5px; /* Optional: rounds the corners */
+    line-height: 28px;
+}
+.quote span {
+    font-size: 12px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+@media only screen and (max-width: 680px) {
+    section {
+        padding: 40px 20px;
+    }
+    header {
+        padding-top: 0;
+        text-align: center
+    }
+    header h2 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    header img {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-bottom: 5px;
+    }
+    h1 {
+        font-size: 34px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #2e3239;
+        color: #ccc;
+    }
+    a {
+        color: #ccc;
+    }
+    a:hover {
+        color: #fff;
+    }
+    h1, h2, h3 {
+        color: #ddd;
+    }
+    header {
+        background: #242832;
+        color: #3d9cfa;
+    }
+
+    header img {
+        border: 2px solid #eee;
+        opacity: 0.8;
+    }
+    header h2 {
+        border-top: 1px solid #666;
+        color: #bbb;
+    }
+    main a {
+        border-bottom: 1px solid #555;
+    }
+    main a:hover {
+        border-color: #fff;
+    }
+}
+</style>
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163810904-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-163810904-1');
+</script>
+</head>
+<body>
+<header>
+    <section>
+        <img src="img/brock.jpg" alt="Brock Martin" width="150" height="150" decoding="async">
+        <h1>Brock Martin</h1>
+        <h2>Web developer with over 17 years of experience creating beautiful, interactive websites for hundreds of clients.</h2>
+        
+        Let’s work together!<br>
+        <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#98;&#114;&#111;&#99;&#107;&#64;&#98;&#114;&#111;&#99;&#107;&#109;&#97;&#114;&#116;&#105;&#110;&#46;&#110;&#101;&#116;" title="Email" class="email">&#98;&#114;&#111;&#99;&#107;&#64;&#98;&#114;&#111;&#99;&#107;&#109;&#97;&#114;&#116;&#105;&#110;&#46;&#110;&#101;&#116;</a>
+    </section>
+</header>
+<main>
+    <section>
+        <p>I specialize in creating custom WordPress themes with unique functionality and meticulous attention to detail. I frequently partner with creative agencies and small businesses to bring their visions to life. I also collaborate with larger teams, providing web development expertise to complement their in-house design and marketing capabilities.</p>
+        
+        <h2>Contact</h2>
+
+        <p>How can I help with your project? <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#98;&#114;&#111;&#99;&#107;&#64;&#98;&#114;&#111;&#99;&#107;&#109;&#97;&#114;&#116;&#105;&#110;&#46;&#110;&#101;&#116;"><b>Send me an email</b></a>, and we can set up a call or address any questions you have. Find me on <a href="https://www.linkedin.com/in/brockmartin333/" target="_blank">LinkedIn</a> and <a href="https://www.facebook.com/brock.martin.37625/" target="_blank">Facebook</a>.</p>
+        
+        <h2>Projects</h2>
+
+        <div class="project">
+            <a href="https://kaisafit.com/" target="_blank"><img src="img/logo-kaisa.png" alt="KaisaFit logo" width="50" height="50" decoding="async"></a>
+            <h3><a href="https://kaisafit.com/" target="_blank">KaisaFit</a></h3>
+            <p>A subscription-based fitness platform, offering hundreds of on-demand mobility and recovery classes. Built a custom WordPress theme, setup WooCommerce subscriptions, and integrated with a mobile app platform. Design and branding by <a href="https://www.hayandcodesign.com/" target="_blank">Hay&Co Design</a>.</p>
+        </div>
+
+        <div class="project">
+            <a href="https://www.fearlessphotographers.com/" target="_blank"><img src="img/logo-fearless.png" alt="Fearless Photographers logo" width="50" height="50" decoding="async"></a>
+            <h3><a href="https://www.fearlessphotographers.com/" target="_blank">Fearless Photographers</a></h3>
+            <p>A global membership platform celebrating innovative wedding photography through contests, awards, and a directory feature that helps couples find available photographers. Completely custom front-end and content management system.</p>
+        </div>
+
+        <div class="project">
+            <a href="https://sperryfabricarchitecture.com/" target="_blank"><img src="img/logo-sperry.png" alt="Sperry Fabric Architecture logo" width="50" height="50" decoding="async"></a>
+            <h3><a href="https://sperryfabricarchitecture.com/" target="_blank">Sperry Fabric Architecture</a></h3>
+            <p>A comprehensive fabric architecture firm, specializing in the design and delivery of custom-made awnings, canopies, event structures, and more. Developed a custom WordPress theme based on the branding and design by <a href="https://figindustries.com/" target="_blank">Fig Industries</a>.</p>
+        </div>
+         
+        <div class="project">
+            <a href="https://homemadecooking.com/" target="_blank"><img src="img/logo-homemade.png" alt="Homemade Cooking logo" width="50" height="50" decoding="async"></a>
+            <h3><a href="https://homemadecooking.com/" target="_blank">Homemade Cooking</a></h3>
+            <p>Free online cooking classes lead by a team of professional chefs. Developed a WordPress theme with deep Klaviyo integration for class registration and email marketing.</p>
+        </div>
+         
+        <div class="project">
+            <a href="https://www.worshipcenter.org/" target="_blank"><img src="img/logo-wc.png" alt="Worship Center logo" width="50" height="50" decoding="async"></a>
+            <h3><a href="https://www.worshipcenter.org/" target="_blank">Worship Center</a></h3>
+            <p>A church based in Lancaster, PA. Implemented new in-house designs by customizing existing WordPress theme.</p>
+        </div>
+         
+        <div class="project">
+            <a href="https://theweddingschool.net/" target="_blank"><img src="img/logo-wedding-school.png" alt="The Wedding School logo" width="50" height="50" decoding="async"></a>
+            <h3><a href="https://theweddingschool.net/" target="_blank">The Wedding School</a></h3>
+            <p>Online learning platform for thousands of wedding photographers. Built a custom WordPress theme with WooCommerce subscription membership and individual purchase options.</p>
+        </div>
+        
+
+        <h2>Kind Words</h2>
+
+        <div class="quotes">
+            <div class="quote">
+                “Working with Brock on our flagship website, Fearless Photographers, was a fantastic experience. We are still working him to make continuous improvements to the site and wholeheartedly recommend him.”
+                <span>- <a href="https://www.fearlessphotographers.com/" target="_blank">Huy Nguyen</a></span>
+            </div>
+    
+            <div class="quote">
+                “We are thrilled with the results of our new website. Brock's willingness to answer questions and walk us through things step by step made us feel like a priority. Thanks again for your guidance throughout this entire process.”
+                <span>- <a href="https://www.barevillekitchens.com/" target="_blank">Bareville Kitchens & Design</a></span>
+            </div>
+
+            <div class="quote">
+                “Brock is simply remarkable. His customer service is beyond top-notch, I would recommend him to anyone who wants a beautiful site and an amazing experience.”
+                <span>- <a href="https://theweddingschool.net/" target="_blank">Susan Stripling</a></span>
+            </div>
+
+            <div class="quote">
+                “Working with Brock was a total joy. He actually LISTENS to what you want and settles for nothing less than complete customer satisfaction. From here on out I won't trust our website needs to anyone else.”
+                <span>- <a href="https://melissajill.com/" target="_blank">Melissa Jill</a></span>
+            </div>
+
+            <div class="quote">
+                “I was beyond impressed with the communication that went on during this process, response was ALWAYS immediate and, believe me, I had plenty of questions! Hands down THE BEST in the business and a pleasure to work with.”
+                <span>- Monica Webb</span>
+            </div>
+
+            <div class="quote">
+                “I had an idea in my head of what I wanted for my new website and Brock was able to take my ideas and bring them to life. He was so easy to work with and I can’t put into words how wonderful the experience was.”
+                <span>- <a href="https://www.alisonconklin.com/" target="_blank">Alison Conklin</a></span>
+            </div>
+        </div>
+ 
+
+        <h2>Experience</h2>
+
+        <div class="project">
+            <img src="img/logo-emerald.png" alt="Emerald logo" width="50" height="50" decoding="async">
+            <h3>Emerald <span>(2021 - Present)</span></h3>
+            <p>Lead Web Developer and Consultant for several brands, including <a href="https://theportraitsystem.com/" target="_blank">The Portrait System</a>, <a href="https://theportraitmasters.com/" target="_blank">The Portrait Masters</a>, and <a href="https://theweddingschool.net/" target="_blank">The Wedding School</a>.</p>
+        </div>
+
+        <div class="project">
+            <img src="img/logo-dps.png" alt="Digital Product Studio logo" width="50" height="50" decoding="async">
+            <h3>Digital Product Studio <span>(2018 - 2020)</span></h3>
+            <p>Lead Web Developer, responsible for developing custom learning platforms that utilize subscription and e-commerce models.</p>
+        </div>
+
+        <div class="project">
+            <img src="img/logo-suebryce.png" alt="Sue Bryce Education logo" width="50" height="50" decoding="async">
+            <h3>Sue Bryce Education <span>(2016 - 2021)</span></h3>
+            <p>Created a comprehensive online learning platform for thousands of photographers, which features a subscription-based membership, live events, and an image competition with a judging system.</p>
+        </div>
+
+        <div class="project">
+            <img src="img/logo-infinet.png" alt="Infinet Design logo" width="50" height="50" decoding="async">
+            <h3>Infinet Design <span>(2007 - 2016)</span></h3>
+            <p>As a founder and partner, I led web development and project management for hundreds of small business clients, specializing in custom websites, logo design, and branding projects.</p>
+        </div>
+
+        <div class="project">
+            <h3>Clipper Magazine <span>(2004 - 2007)</span></h3>
+            <p>Maintained a national coupon website and developed numerous small business websites.</p>
+        </div>
+
+        <p>Before founding Infinet Design, I worked in technology at several companies, including MapQuest, America Online, and Armstrong World Industries.</p>
+
+        <!--<p>Ready to start your project? Contact me today.</p>-->
+    </section>
+</main>
+</body>
+</html>
