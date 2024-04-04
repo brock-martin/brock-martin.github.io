@@ -303,9 +303,11 @@ header .email {
 .services .item h2 {
     font-size: 28px;
     color: #0e5586;
+    white-space: pre-line;
 }
 @media only screen and (max-width: 980px) {
     .services .item {
+        width: 100%;
         border-right: 0;
     }
     .services .item:after {
@@ -318,9 +320,10 @@ header .email {
     .services .item:last-child:after {
         display: none;
     }
-    .services .item {
-        width: 100%;
+    .services .item h2 {
+        white-space: normal;
     }
+
 }
 
 .quotes {
@@ -536,15 +539,18 @@ header .email {
         <h3>Services</h3>
 
         <div class="item">
-            <h2>WordPress Development</h2>
+            <h2>WordPress
+                Development</h2>
             <p>Completely custom WordPress themes, built just for your project.</p>
         </div>
         <div class="item">
-            <h2>Website Development</h2>
+            <h2>Website
+                Development</h2>
             <p>Modern code and unique features using a variety of technologies.</p>
         </div>
         <div class="item">
-            <h2>Technical Consulting</h2>
+            <h2>Technical
+                Consulting</h2>
             <p>Hosting setup, website updates, and custom service integrations.</p>
         </div>
     </section>
