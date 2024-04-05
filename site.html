@@ -42,6 +42,13 @@ Contact me at brock@brockmartin.net
   --swiper-pagination-color: #fff;
   --swiper-pagination-bottom: 20px;
   --swiper-pagination-bullet-opacity: 0.5;
+
+  /*--color-text: #464a4c;*/
+  --color-text: #111;
+  --color-base: #226691;
+  --color-base-light: #d1e0e8;
+  --color-base-dark: #112a38;
+  --color-accent: #eb4100;
 }
 
 html {
@@ -50,18 +57,18 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
-body {
+body, input, textarea {
     margin: 0;
     background: #fff;
     text-align: left;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: normal;
-    color: #111;
+    color: var(--color-text);
     line-height: 1.5;
 }
 a {
-    color: #111;
+    color: var(--color-text);
     text-decoration: none;
     transition: all 0.4s;
 }
@@ -75,7 +82,7 @@ h1, h2, h3, h4 {
     font-size: 24px;
     font-weight: bold;
     font-style: normal;
-    color: #111;
+    color: var(--color-text);
     line-height: 1.3;
 }
 h1 {
@@ -116,23 +123,21 @@ img {
     letter-spacing: 1px;
 }
 
-.email {
+.cta {
     display: inline-block;
-    padding: 15px 30px 15px 70px;
-    background-color: #0e5586;
-    background-image: url('img/icon-email.svg');
-    background-repeat: no-repeat;
-    background-position: 30px center;
-    background-size: 30px auto;
+    padding: 15px 30px;
+    background-color: var(--color-accent);
     border-radius: 50px;
+    border: 0;
+    cursor: pointer;
     font-size: 16px;
     color: #fff;
     letter-spacing: 0.5px;
     transition: all 0.4s;
 }
-.email:hover {
+.cta:hover {
     opacity: 1;
-    background-color: #0a295e;
+    background-color: var(--color-base-dark);
     color: #fff;
 }
 
@@ -162,9 +167,9 @@ header h2 span:before {
     padding-right: 10px;
     color: #ccc;
 }
-header .email {
+header .cta {
     margin-left: auto;
-    padding: 10px 30px 10px 70px;
+    padding: 10px 30px;
 }
 @media only screen and (max-width: 680px) {
     h1 {
@@ -192,11 +197,6 @@ header .email {
     }
 }
 @media only screen and (max-width: 480px) {
-    header .email {
-        text-indent: -9999px;
-        padding: 10px 30px;
-        background-position: center;
-    }
 }
 @media only screen and (max-height: 600px) {
     header {
@@ -204,8 +204,8 @@ header .email {
     }
 }
 .projects {
-    background: #0e5586;
-    background: linear-gradient(135deg, rgba(17,127,173,1) 0%, rgba(10,41,94,1) 100%);
+    background: var(--color-base);
+    background: linear-gradient(135deg, var(--color-base) 0%, var(--color-base-dark) 100%);
     overflow: hidden;
 }
 .projects .swiper {
@@ -255,7 +255,7 @@ header .email {
   align-items: center;
   height: 400px;
   min-height: 400px;
-  background-color: #dbeaf1;
+  background-color: var(--color-base-light);
 }
 .overview .image {
     width: 50%;
@@ -302,7 +302,7 @@ header .email {
 }
 .services .item h2 {
     font-size: 28px;
-    color: #0e5586;
+    color: var(--color-base);
     white-space: pre-line;
 }
 @media only screen and (max-width: 980px) {
@@ -327,8 +327,8 @@ header .email {
 }
 
 .quotes {
-    background: #0e5586;
-    background: linear-gradient(135deg, rgba(17,127,173,1) 0%, rgba(10,41,94,1) 100%);
+    background: var(--color-base);
+    background: linear-gradient(135deg, var(--color-base) 0%, var(--color-base-dark) 100%);
 }
 .quotes .swiper {
     padding: 110px 0 90px 0;
@@ -369,7 +369,7 @@ header .email {
 }
 
 .about {
-    background-color: #dbeaf1;
+    background-color: var(--color-base-light);
 }
 .about .content {
     position: relative;
@@ -431,7 +431,7 @@ header .email {
     white-space: nowrap;
     font-size: 14px;
     font-weight: normal;
-    color: #999;
+    opacity: 0.7;
 }
 @media only screen and (max-width: 680px) {
     .expreience {
@@ -470,7 +470,7 @@ header .email {
 <header>
     <div class="content">
         <h2>Brock Martin <span>Web Developer</span></h2>
-        <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#98;&#114;&#111;&#99;&#107;&#64;&#98;&#114;&#111;&#99;&#107;&#109;&#97;&#114;&#116;&#105;&#110;&#46;&#110;&#101;&#116;" class="email">Email</a>
+        <a href="#" class="contact cta">Contact</a>
     </div>
 </header>
 
@@ -531,7 +531,7 @@ header .email {
         <div class="info">
             <h2>Web Development Partner</h2>
             <p>Let’s bring your design to life with meticulous attention to detail. I create custom, hand-coded websites for marketing agencies, small businesses, and startups.</p>
-            <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#98;&#114;&#111;&#99;&#107;&#64;&#98;&#114;&#111;&#99;&#107;&#109;&#97;&#114;&#116;&#105;&#110;&#46;&#110;&#101;&#116;" class="email">Get Started!</a>
+            <a href="#" class="contact cta">Get Started!</a>
         </div>
     </section>
 
@@ -598,7 +598,7 @@ header .email {
             <h2>Let’s Work Together</h2>
             <p>Over 17 years in the web development field, but more than a web developer. Clear communication and exceptional customer service. Experience running a creative agency, working on a development team, and managing design and development projects from start to finish.</p>
             <p><a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#98;&#114;&#111;&#99;&#107;&#64;&#98;&#114;&#111;&#99;&#107;&#109;&#97;&#114;&#116;&#105;&#110;&#46;&#110;&#101;&#116;"><b>Send me an email</b></a>, and we can schedule a call or address any questions you have. Find me on <a href="https://www.linkedin.com/in/brockmartin333/" target="_blank">LinkedIn</a> and <a href="https://www.facebook.com/brock.martin.37625/" target="_blank">Facebook</a>.</p>
-            <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#98;&#114;&#111;&#99;&#107;&#64;&#98;&#114;&#111;&#99;&#107;&#109;&#97;&#114;&#116;&#105;&#110;&#46;&#110;&#101;&#116;" class="email">Get in Touch</a>
+            <a href="#" class="contact cta">Get in Touch</a>
         </div>
     </section>
 
@@ -638,6 +638,220 @@ header .email {
         <p>Before founding Infinet Design, I worked in technology at several companies, including MapQuest, America Online, and Armstrong World Industries.</p>
     </section>
 </main>
+
+<style>
+.contact-overlay {
+    display: flex;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(17, 42, 56, 0.5);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+}
+.contact-overlay .content {
+    position: relative;
+    margin: 0 auto;
+    padding: 30px;
+    width: 90%;
+	max-width: 400px;
+    background-color: #fff;
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+	text-align: left;
+}
+.contact-overlay .content .result {
+    display: inline-block;
+    padding-left:10px;
+}
+.contact-overlay .close-button {
+	position: absolute;
+	top: 5px;
+    right: 10px;
+    height: 30px;
+    font-size: 32px;
+    color: #666;
+    line-height: 30px;
+    cursor: pointer;
+}
+.contact-overlay .close-button:hover, .contact-overlay .close-button:focus {
+    color: black;
+    text-decoration: none;
+}
+@media only screen and (max-width: 680px) {
+    .contact-overlay .content {
+        padding: 20px;
+    }
+}
+label {
+    display: block;
+    margin: 10px auto;
+    font-size: 14px;
+    font-weight: bold;
+}
+input, textarea {
+    margin: 5px 0;
+    padding: 8px 12px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.4s;
+}
+input:focus, textarea:focus {
+    border-color: var(--color-base-dark);
+    outline: none;
+}
+</style>
+
+<div class="contact-overlay" id="contactOverlay">
+	<div class="content">
+		<span class="close-button" id="closeButton">&times;</span>
+
+        <h2>Contact</h2>
+        
+        <form method="POST" id="form">
+            <input type="text" name="_honey" style="display:none">
+            <label>
+                Name *
+                <input type="text" name="name" required>
+            </label>
+            <label>
+                Email *
+                <input type="email" name="email" required>
+            </label>
+            <label>
+                Phone
+                <input type="text" name="phone">
+            </label>
+            <!--
+            <label>
+                Website
+                <input type="text" name="website">
+            </label>
+            -->
+            <label>
+                How Can I Help?
+                <textarea name="message" rows="5"></textarea>
+            </label>
+        
+            <button type="submit" class="cta">Send</button>
+            <div class="result" id="result"></div>
+        </form>
+            
+	</div>
+</div>
+
+<script>
+function fadeOut(element, duration = 500) {
+    element.style.opacity = 1;
+
+    (function fade() {
+        if ((element.style.opacity -= 0.1) < 0) {
+            element.style.display = 'none';
+        } else {
+            requestAnimationFrame(fade);
+        }
+    })();
+}
+
+function fadeIn(element, duration = 500) {
+    element.style.opacity = 0;
+    element.style.display = 'flex';
+
+    (function fade() {
+        var val = parseFloat(element.style.opacity);
+        if (!((val += 0.1) > 1)) {
+            element.style.opacity = val;
+            requestAnimationFrame(fade);
+        }
+    })();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const overlay = document.getElementById('contactOverlay');
+
+    // open overlay
+    document.querySelectorAll('.contact').forEach(emailButton => {
+        emailButton.addEventListener('click', function(e) {
+            fadeIn(overlay);
+            e.preventDefault();
+        });
+    });
+
+    // close on button click
+    document.getElementById('closeButton').addEventListener('click', function() {
+        fadeOut(overlay);
+    });
+
+    // close when clicking outside of the modal
+    window.addEventListener('click', function(event) {
+        if (event.target === overlay) {
+            fadeOut(overlay);
+        }
+    });
+
+    // close on esc key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === "Escape") {
+            fadeOut(overlay);
+        }
+    });
+});
+
+
+const form = document.getElementById('form');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+    result.innerHTML = "Please wait..."
+
+    fetch('https://formsubmit.co/ajax/9b4ea6fcd246ca7d0c59ae7921fd8730', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: json
+    })
+    .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+            result.innerHTML = json.message;
+        } else {
+            console.log(response);
+            result.innerHTML = json.message;
+        }
+    })
+    .catch(error => {
+        console.log(error);
+        result.innerHTML = "Something went wrong!";
+    })
+    .then(function() {
+        /*
+        form.reset();
+        setTimeout(() => {
+            result.style.display = "none";
+        }, 3000);
+        */
+    });
+});
+
+
+</script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
