@@ -19,30 +19,44 @@ Contact me at brock@brockmartin.net
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<!--
-<link rel="preload" href="img/brock.jpg" as="image">
+
 <link rel="preload" href="fonts/inter-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-v12-latin-700.woff2" as="font" type="font/woff2" crossorigin>
--->
 
+<!--
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-<!--
 <style></style>
 -->
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 <style>
+/* inter-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/inter-v12-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/inter-v12-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 :root {
   --swiper-navigation-size: 24px;
   --swiper-navigation-color: #fff;
   --swiper-pagination-color: #fff;
   --swiper-pagination-bottom: 20px;
   --swiper-pagination-bullet-opacity: 0.5;
-
   /*--color-text: #464a4c;*/
   --color-text: #111;
   --color-base: #226691;
@@ -100,6 +114,25 @@ img {
     height: auto;
     vertical-align: top;
 }
+label {
+    display: block;
+    margin: 10px auto;
+    font-size: 14px;
+    font-weight: bold;
+}
+input, textarea {
+    margin: 5px 0;
+    padding: 8px 12px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.4s;
+}
+input:focus, textarea:focus {
+    border-color: var(--color-base-dark);
+    outline: none;
+}
 
 .content {
     position: relative;
@@ -139,6 +172,61 @@ img {
     opacity: 1;
     background-color: var(--color-base-dark);
     color: #fff;
+}
+
+.contact-overlay {
+    display: flex;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(17, 42, 56, 0.5);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+}
+.contact-overlay .content {
+    position: relative;
+    margin: 0 auto;
+    padding: 30px;
+    width: 90%;
+	max-width: 400px;
+    background-color: #fff;
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+	text-align: left;
+}
+.contact-overlay .content .result {
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-base);
+}
+.contact-overlay .close-button {
+	position: absolute;
+	top: 5px;
+    right: 10px;
+    height: 30px;
+    font-size: 32px;
+    color: #666;
+    line-height: 30px;
+    cursor: pointer;
+}
+.contact-overlay .close-button:hover, .contact-overlay .close-button:focus {
+    color: black;
+    text-decoration: none;
+}
+@media only screen and (max-width: 680px) {
+    .contact-overlay .content {
+        padding: 20px;
+    }
 }
 
 header {
@@ -260,7 +348,7 @@ header .cta {
 .overview .image {
     width: 50%;
     height: 100%;
-    background-image: url('img/projects.jpg');
+    background-image: url('img/project-grid.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -597,7 +685,7 @@ header .cta {
             <img src="img/brock.jpg" width="150" height="150" alt="Brock Martin">
             <h2>Let’s Work Together</h2>
             <p>Over 17 years in the web development field, but more than a web developer. Clear communication and exceptional customer service. Experience running a creative agency, working on a development team, and managing design and development projects from start to finish.</p>
-            <p><a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#98;&#114;&#111;&#99;&#107;&#64;&#98;&#114;&#111;&#99;&#107;&#109;&#97;&#114;&#116;&#105;&#110;&#46;&#110;&#101;&#116;"><b>Send me an email</b></a>, and we can schedule a call or address any questions you have. Find me on <a href="https://www.linkedin.com/in/brockmartin333/" target="_blank">LinkedIn</a> and <a href="https://www.facebook.com/brock.martin.37625/" target="_blank">Facebook</a>.</p>
+            <p><a href="#" class="contact"><b>Contact me</b></a> to schedule a call or email me directly at <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#98;&#114;&#111;&#99;&#107;&#64;&#98;&#114;&#111;&#99;&#107;&#109;&#97;&#114;&#116;&#105;&#110;&#46;&#110;&#101;&#116;">&#98;&#114;&#111;&#99;&#107;&#64;&#98;&#114;&#111;&#99;&#107;&#109;&#97;&#114;&#116;&#105;&#110;&#46;&#110;&#101;&#116;</a>. Find me on <a href="https://www.linkedin.com/in/brockmartin333/" target="_blank">LinkedIn</a> and <a href="https://www.facebook.com/brock.martin.37625/" target="_blank">Facebook</a>.</p>
             <a href="#" class="contact cta">Get in Touch</a>
         </div>
     </section>
@@ -639,79 +727,6 @@ header .cta {
     </section>
 </main>
 
-<style>
-.contact-overlay {
-    display: flex;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    background-color: rgba(17, 42, 56, 0.5);
-    backdrop-filter: blur(6px);
-    opacity: 0;
-}
-.contact-overlay .content {
-    position: relative;
-    margin: 0 auto;
-    padding: 30px;
-    width: 90%;
-	max-width: 400px;
-    background-color: #fff;
-	box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-    border-radius: 3px;
-	text-align: left;
-}
-.contact-overlay .content .result {
-    display: inline-block;
-    padding-left:10px;
-}
-.contact-overlay .close-button {
-	position: absolute;
-	top: 5px;
-    right: 10px;
-    height: 30px;
-    font-size: 32px;
-    color: #666;
-    line-height: 30px;
-    cursor: pointer;
-}
-.contact-overlay .close-button:hover, .contact-overlay .close-button:focus {
-    color: black;
-    text-decoration: none;
-}
-@media only screen and (max-width: 680px) {
-    .contact-overlay .content {
-        padding: 20px;
-    }
-}
-label {
-    display: block;
-    margin: 10px auto;
-    font-size: 14px;
-    font-weight: bold;
-}
-input, textarea {
-    margin: 5px 0;
-    padding: 8px 12px;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
-    transition: border-color 0.4s;
-}
-input:focus, textarea:focus {
-    border-color: var(--color-base-dark);
-    outline: none;
-}
-</style>
-
 <div class="contact-overlay" id="contactOverlay">
 	<div class="content">
 		<span class="close-button" id="closeButton">&times;</span>
@@ -719,7 +734,10 @@ input:focus, textarea:focus {
         <h2>Contact</h2>
         
         <form method="POST" id="form">
-            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="access_key" value="80842046-f0af-435b-bc57-9083d34bb8ca">
+            <input type="hidden" name="subject" value="New Submission from BrockMartin.net">
+            <input type="checkbox" name="botcheck" id="" style="display:none;">
+
             <label>
                 Name *
                 <input type="text" name="name" required>
@@ -749,6 +767,8 @@ input:focus, textarea:focus {
             
 	</div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
 function fadeOut(element, duration = 500) {
@@ -805,8 +825,47 @@ document.addEventListener('DOMContentLoaded', function() {
             fadeOut(overlay);
         }
     });
-});
 
+    // project slider
+    const projectSwiper = new Swiper('.projects .swiper', {
+        slidesPerView: 'auto',
+        slidesPerGroupAuto: true,
+        grabCursor: true,
+        keyboard: {
+            enabled: true,
+        },
+        mousewheel: {
+            forceToAxis: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    
+    // testimonial slider
+    const quoteSwiper = new Swiper('.quotes .swiper', {
+        slidesPerView: 1,
+        grabCursor: true,
+        keyboard: {
+            enabled: true,
+        },
+        mousewheel: {
+            forceToAxis: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+});
 
 const form = document.getElementById('form');
 const result = document.getElementById('result');
@@ -818,7 +877,7 @@ form.addEventListener('submit', function(e) {
     const json = JSON.stringify(object);
     result.innerHTML = "Please wait..."
 
-    fetch('https://formsubmit.co/ajax/9b4ea6fcd246ca7d0c59ae7921fd8730', {
+    fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -840,58 +899,10 @@ form.addEventListener('submit', function(e) {
         result.innerHTML = "Something went wrong!";
     })
     .then(function() {
-        /*
-        form.reset();
+        // form.reset();
         setTimeout(() => {
             result.style.display = "none";
-        }, 3000);
-        */
-    });
-});
-
-
-</script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const projectSwiper = new Swiper('.projects .swiper', {
-        slidesPerView: 'auto',
-        slidesPerGroupAuto: true,
-        grabCursor: true,
-        keyboard: {
-            enabled: true,
-        },
-        mousewheel: {
-            forceToAxis: true,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-    
-    const quoteSwiper = new Swiper('.quotes .swiper', {
-        slidesPerView: 1,
-        grabCursor: true,
-        keyboard: {
-            enabled: true,
-        },
-        mousewheel: {
-            forceToAxis: true,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+        }, 4000);
     });
 });
 </script>
