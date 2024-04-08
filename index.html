@@ -131,7 +131,7 @@ Contact me at brock@brockmartin.net
                     <span>- <a href="https://www.fearlessphotographers.com/" target="_blank">Huy Nguyen</a></span>
                 </div>
                 <div class="quote swiper-slide">
-                    <p>“We are thrilled with the results of our new website. Brock's willingness to answer questions and walk us through things step by step made us feel like a priority. Thanks again for your guidance throughout this entire process.”</p>
+                    <p>“We are thrilled with the results of our new website. Brock’s willingness to answer questions and walk us through things step by step made us feel like a priority. Thanks again for your guidance throughout this entire process.”</p>
                     <span>- <a href="https://www.barevillekitchens.com/" target="_blank">Bareville Kitchens & Design</a></span>
                 </div>
                 <div class="quote swiper-slide">
@@ -139,7 +139,7 @@ Contact me at brock@brockmartin.net
                     <span>- <a href="https://theweddingschool.net/" target="_blank">Susan Stripling</a></span>
                 </div>
                 <div class="quote swiper-slide">
-                    <p>“Working with Brock was a total joy. He actually LISTENS to what you want and settles for nothing less than complete customer satisfaction. From here on out, I won't trust our website needs to anyone else.”</p>
+                    <p>“Working with Brock was a total joy. He actually LISTENS to what you want and settles for nothing less than complete customer satisfaction. From here on out, I won’t trust our website needs to anyone else.”</p>
                     <span>- <a href="https://melissajill.com/" target="_blank">Melissa Jill</a></span>
                 </div>
                 <div class="quote swiper-slide">
@@ -149,6 +149,22 @@ Contact me at brock@brockmartin.net
                 <div class="quote swiper-slide">
                     <p>“I had an idea in my head of what I wanted for my new website, and Brock was able to take my ideas and bring them to life. He was so easy to work with and I can’t put into words how wonderful the experience was.”</p>
                     <span>- <a href="https://www.alisonconklin.com/" target="_blank">Alison Conklin</a></span>
+                </div>
+                <div class="quote swiper-slide">
+                    <p>“He not only answered my questions along the way, but proposed details that I would have never thought about. This has helped me to gain a marketing niche that allowed my clientele to continue growing in the past year.”</p>
+                    <span>- Ryan Takuma</span>
+                </div>
+                <div class="quote swiper-slide">
+                    <p>“Blogging my photos is now easy and effortless with a simple backend interface. His methodology and service level is truly unique and it shows. I’m so pleased with the entire experience and I can’t thank him enough.”</p>
+                    <span>- Kate Headley</span>
+                </div>
+                <div class="quote swiper-slide">
+                    <p>“I couldn’t have asked for a better experience working with Brock. He set up the functionality of the site without a glitch. I can’t thank you enough!”</p>
+                    <span>- Jennifer Davis</span>
+                </div>
+                <div class="quote swiper-slide">
+                    <p>“Professional, detail-oriented, reliable, these are just a few of the words that come to mind when I think of Brock. I don’t know if I can put a value on what he has done for my company.”</p>
+                    <span>- Kristy Dickerson</span>
                 </div>
             </div>
 
@@ -242,7 +258,7 @@ Contact me at brock@brockmartin.net
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>function fadeOut(e,t=500){e.style.opacity=1,function t(){(e.style.opacity-=.1)<0?e.style.display="none":requestAnimationFrame(t)}()}function fadeIn(e,t=500){e.style.opacity=0,e.style.display="flex",function t(){var n=parseFloat(e.style.opacity);(n+=.1)>1||(e.style.opacity=n,requestAnimationFrame(t))}()}const overlay=document.getElementById("contactOverlay"),form=document.getElementById("form"),result=document.getElementById("result");document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".contact").forEach(e=>{e.addEventListener("click",function(e){fadeIn(overlay),e.preventDefault()})}),document.getElementById("closeButton").addEventListener("click",function(){fadeOut(overlay)}),window.addEventListener("click",function(e){e.target===overlay&&fadeOut(overlay)}),document.addEventListener("keydown",function(e){"Escape"===e.key&&fadeOut(overlay)});new Swiper(".projects .swiper",{slidesPerView:"auto",slidesPerGroupAuto:!0,grabCursor:!0,keyboard:{enabled:!0},mousewheel:{forceToAxis:!0},pagination:{el:".swiper-pagination"},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}}),new Swiper(".quotes .swiper",{slidesPerView:1,grabCursor:!0,keyboard:{enabled:!0},mousewheel:{forceToAxis:!0},pagination:{el:".swiper-pagination"},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}})}),form.addEventListener("submit",function(e){e.preventDefault();const t=new FormData(form),n=Object.fromEntries(t),o=JSON.stringify(n);overlay.classList.add("confirm"),result.innerHTML="Please wait...",fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:o}).then(async e=>{let t=await e.json();200==e.status?result.innerHTML=t.message:(console.log(e),result.innerHTML=t.message)}).catch(e=>{console.log(e),result.innerHTML="Something went wrong!"}).then(function(){})});</script>
+<script>function fadeOut(e,t=500){e.style.opacity=1,function t(){(e.style.opacity-=.1)<0?e.style.display="none":requestAnimationFrame(t)}()}function fadeIn(e,t=500){e.style.opacity=0,e.style.display="flex",function t(){var n=parseFloat(e.style.opacity);(n+=.1)>1||(e.style.opacity=n,requestAnimationFrame(t))}()}const overlay=document.getElementById("contactOverlay"),form=document.getElementById("form"),result=document.getElementById("result");document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".contact").forEach(e=>{e.addEventListener("click",function(e){fadeIn(overlay),e.preventDefault()})}),document.getElementById("closeButton").addEventListener("click",function(){fadeOut(overlay)}),window.addEventListener("click",function(e){e.target===overlay&&fadeOut(overlay)}),document.addEventListener("keydown",function(e){"Escape"===e.key&&fadeOut(overlay)});new Swiper(".projects .swiper",{slidesPerView:"auto",slidesPerGroupAuto:!0,grabCursor:!0,keyboard:{enabled:!0},mousewheel:{forceToAxis:!0},pagination:{el:".swiper-pagination"},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}}),new Swiper(".quotes .swiper",{slidesPerView:1,grabCursor:!0,keyboard:{enabled:!0},mousewheel:{forceToAxis:!0},pagination:{el:".swiper-pagination",dynamicBullets:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}})}),form.addEventListener("submit",function(e){e.preventDefault();const t=new FormData(form),n=Object.fromEntries(t),o=JSON.stringify(n);overlay.classList.add("confirm"),result.innerHTML="Please wait...",fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:o}).then(async e=>{let t=await e.json();200==e.status?result.innerHTML=t.message:(console.log(e),result.innerHTML=t.message)}).catch(e=>{console.log(e),result.innerHTML="Something went wrong!"}).then(function(){})});</script>
 
 </body>
 </html>
