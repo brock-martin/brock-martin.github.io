@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brock Martin - Web Developer</title>
+<link rel="canonical" href="https://brockmartin.net/">
+<meta name="description" content="Website and WordPress developer with years of experience creating beautiful, interactive websites for hundreds of clients.">
+<meta property="og:title" content="Brock Martin - Web Developer">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Brock Martin">
+<meta property="og:description" content="Website and WordPress developer with years of experience creating beautiful, interactive websites for hundreds of clients.">
+<meta property="og:url" content="https://brockmartin.net/">
+<meta property="og:image" content="https://brockmartin.net/img/website-projects.jpg">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="icon" type="image/png" href="img/icon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="img/icon-180x180.png" sizes="180x180">
+<link rel="apple-touch-icon" href="img/icon-180x180.png" sizes="180x180">
+<link rel="preload" href="fonts/inter-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-v12-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* inter-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/inter-v12-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/inter-v12-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --swiper-navigation-size: 24px;
+  --swiper-navigation-color: #fff;
+  --swiper-pagination-color: #fff;
+  --swiper-pagination-bottom: 20px;
+  --swiper-pagination-bullet-opacity: 0.5;
+  --color-text: #111;
+  --color-base: #226691;
+  --color-base-light: #d1e0e8;
+  --color-base-dark: #112a38;
+  --color-accent: #eb4100;
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, input, textarea {
+    margin: 0;
+    background: #fff;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--color-text);
+    line-height: 1.5;
+}
+a {
+    color: var(--color-text);
+    text-decoration: underline;
+    transition: all 0.4s;
+}
+a:hover {
+    opacity: 0.6;
+}
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    color: var(--color-text);
+    line-height: 1.3;
+}
+h1 {
+    font-size: 40px;
+    font-weight: normal;
+}
+p {
+    margin: 10px auto 20px auto;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+label {
+    display: block;
+    margin: 10px auto;
+    font-size: 14px;
+    font-weight: bold;
+}
+input, textarea {
+    margin: 5px 0;
+    padding: 8px 12px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.4s;
+}
+input:focus, textarea:focus {
+    border-color: var(--color-base-dark);
+    outline: none;
+}
+
+.content {
+    position: relative;
+    margin: 0 auto;
+    padding: 90px 20px;
+    max-width: 1240px;
+}
+.content.title {
+    padding-top: 120px;
+}
+.content > h3 {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    opacity: 0.7;
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--color-accent);
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+.cta:hover {
+    opacity: 1;
+    background-color: var(--color-base-dark);
+    color: #fff;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+header .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+header h2 span {
+    font-size: 18px;
+    font-weight: normal;
+    opacity: 0.7;
+}
+header h2 span:before {
+    content: '|';
+    display: inline-block;
+    margin-left: 5px;
+    padding-right: 10px;
+    color: #ccc;
+}
+header .cta {
+    margin-left: auto;
+    padding: 10px 30px;
+}
+@media only screen and (max-width: 680px) {
+    h1 {
+        font-size: 30px;
+    }
+    .content {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .content.title {
+        padding-top: 90px;
+    }
+    .content > h3 {
+        top: 40px;
+    }
+    header .content {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    header h2 span {
+        display: block;
+    }
+    header h2 span:before {
+        display: none;
+    }
+}
+@media only screen and (max-width: 480px) {
+}
+@media only screen and (max-height: 600px) {
+    header {
+        position: absolute;
+    }
+}
+
+
+
+.about {
+    padding-top: 90px;
+    background-color: var(--color-base-light);
+}
+.about .content {
+    position: relative;
+    padding-left: 200px;
+    max-width: 900px;
+}
+.about img {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    width: 154px;
+    height: 154px;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+.about p {
+    text-align: left;
+}
+.about .cta {
+    margin-top: 10px;
+}
+.about .contact {
+    line-height: 1.8;
+}
+@media only screen and (max-width: 680px) {
+    .about .content {
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: center;
+    }
+    .about img {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-bottom: 20px;
+    }
+}
+
+.experience {
+    padding-left: 200px;
+    max-width: 900px;
+}
+.experience p {
+    margin: 5px auto;
+}
+.experience ul {
+    margin: 30px 0 70px 0;
+}
+.experience ul li {
+    margin: 7px auto;
+}
+
+.experience .project {
+    position: relative;
+    margin: 40px auto;
+    padding-left: 70px;
+}
+.experience .project img {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 3px;
+}
+.experience .project h3 {
+    font-size: 18px;
+}
+.experience .project h3 span {
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: normal;
+    opacity: 0.7;
+}
+@media only screen and (max-width: 680px) {
+    .experience {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+@media print {
+    a {
+        text-decoration: none;
+    }
+    .cta, .about img, .about .social,.experience .project img {
+        display: none;
+    }
+    header {
+        position: absolute;
+        box-shadow: none;
+    }
+    header h2 {
+        font-size: 34px;
+    }
+    header .content {
+        max-width: 900px;
+    }
+    .content, .about .content {
+        padding: 20px;
+    }
+    .about {
+        background-color: #fff;
+    }
+    .experience .project {
+        margin: 30px auto;
+        padding-left: 0;
+    }
+}
+
+</style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163810904-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-163810904-1');
+</script>
+</head>
+<body>
+<header>
+    <div class="content">
+        <h2>Brock Martin</h2>
+        <a href="/" class="cta">Portfolio</a>
+    </div>
+</header>
+<main>
+    <section class="about">
+        <div class="content">
+            <img src="../img/brock.jpg" width="150" height="150" alt="Brock Martin">
+            <h2>Experienced Web Developer</h2>
+            <p>As a former agency owner, I oversaw hundreds of unique branding and website projects. Over the past 8 years, I’ve been working independently on web development projects for businesses and creative agencies, with a strong focus on attention to detail and delivering tailored solutions with custom CMS features.</p>
+            <p>Most of my recent work has been with WordPress, where I develop fully custom front-end themes and CMS options. I also have experience with related technologies such as WooCommerce, subscriptions, API integrations, custom video solutions, and more.</p>
+            
+            <p class="contact">
+                <b>Contact</b><br>
+                Email: <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#98;&#114;&#111;&#99;&#107;&#64;&#98;&#114;&#111;&#99;&#107;&#109;&#97;&#114;&#116;&#105;&#110;&#46;&#110;&#101;&#116;">&#98;&#114;&#111;&#99;&#107;&#64;&#98;&#114;&#111;&#99;&#107;&#109;&#97;&#114;&#116;&#105;&#110;&#46;&#110;&#101;&#116;</a><br>
+                Phone: <a href="tel:717-371-5965">717-371-5965</a><br>
+                Based in Lancaster, PA<br>
+            </p>
+            <p class="social">Connect with me on <a href="https://www.linkedin.com/in/brockmartin333/" target="_blank">LinkedIn</a> and <a href="https://www.facebook.com/brock.martin.37625/" target="_blank">Facebook</a>.</p>
+            
+            <a href="/" class="cta">View Projects</a>
+        </div>
+    </section>
+
+    <section class="experience content">
+        <h2>Technical Skills</h2>
+
+        <ul>
+            <li>Convert complex designs into fully functional, detail-oriented websites</li>
+            <li>Develop custom WordPress themes with advanced CMS capabilities</li>
+            <li>Expertise in HTML, CSS, JavaScript, PHP, and MySQL</li>
+            <li>Integrate external APIs for custom functionality</li>
+        </ul>
+
+        <h2>Soft Skills</h2>
+
+        <ul>
+            <li>Strong ability to interpret and understand project requirements</li>
+            <li>Excellent at researching and finding the best solutions based on project needs</li>
+            <li>Meticulous attention to detail when working with intricate designs</li>
+            <li>Proven ability to self-manage projects from start to finish</li>
+            <li>Effective communication, both in-person and written</li>
+            <li>Experienced in working with non-technical clients</li>
+        </ul>
+
+        <h2>Work Experience</h2>
+
+        <div class="project">
+            <img src="../img/logo-emerald.png" width="50" height="50" alt="Emerald logo">
+            <h3>Emerald <span>(2021 - Present)</span></h3>
+            <p>Lead Web Developer and Consultant for several brands, including <a href="https://theportraitsystem.com/" target="_blank">The Portrait System</a>, <a href="https://theportraitmasters.com/" target="_blank">The Portrait Masters</a>, and <a href="https://theweddingschool.net/" target="_blank">The Wedding School</a>.</p>
+        </div>
+
+        <div class="project">
+            <img src="../img/logo-dps.png" width="50" height="50" alt="Digital Product Studio logo">
+            <h3>Digital Product Studio <span>(2018 - 2020)</span></h3>
+            <p>Lead Web Developer, responsible for developing custom learning platforms that utilize subscription and e-commerce models.</p>
+        </div>
+
+        <div class="project">
+            <img src="../img/logo-suebryce.png" width="50" height="50" alt="Sue Bryce Education logo">
+            <h3>Sue Bryce Education <span>(2016 - 2021)</span></h3>
+            <p>Created a comprehensive online learning platform for thousands of photographers, which features a subscription-based membership, live events, and an image competition with a judging system.</p>
+        </div>
+
+        <div class="project">
+            <img src="../img/logo-infinet.png" width="50" height="50" alt="Infinet Design logo">
+            <h3>Infinet Design <span>(2007 - 2016)</span></h3>
+            <p>As a founder and partner, I led web development and project management for hundreds of small business clients, specializing in custom websites, logo design, and branding projects.</p>
+        </div>
+
+        <div class="project">
+            <img src="../img/logo-clipper.png" width="50" height="50" alt="Clipper Magazine logo">
+            <h3>Clipper Magazine <span>(2004 - 2007)</span></h3>
+            <p>Maintained a national coupon website and developed numerous small business websites.</p>
+        </div>
+
+        <p>Before founding Infinet Design, I worked in technology at several companies, including MapQuest, America Online, and Armstrong World Industries.</p>
+    </section>
+</main>
+
+
+</body>
+</html>
