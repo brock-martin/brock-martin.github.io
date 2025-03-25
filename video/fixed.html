@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            text-align: center;
+
+            font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.5;
+            color: #222;
+        }
+        .video {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            background-color: #222;
+        }
+        .video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .content {
+            margin: 50px auto;
+            padding: 0 20px;
+            max-width: 660px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="video"><iframe title="Fig Industries | Client Showcase" src="https://player.vimeo.com/video/919295575?background=1&amp;loop=1&amp;dnt=1&amp;app_id=122963" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"></iframe></div>
+
+    <div class="content">
+        <h1>16:9 Video Test</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam nemo, optio quia repudiandae quasi corporis dolorem maxime quod esse eligendi aliquid fugit maiores quam error inventore non architecto vel odit?</p>
+    </div>
+</body>
+</html>
